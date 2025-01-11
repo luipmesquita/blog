@@ -1,0 +1,195 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.my-header {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+    font-size: 3rem !important;
+    color: #063985;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fixed-top {
+    position: fixed;
+    z-index: 1030;
+}
+
+.container.fixed-top{
+    background-color: transparent;
+}
+
+.container.fixed-top.scrolled{
+    background-color: blue;
+}
+
+.cover-img{
+    background-image: url('/images/rio_tejo_por_do_sol.jpeg');
+    width: 100%;
+    height: 100vh;
+    border-radius: 15px;
+    border: 5px white solid;
+    background-size: cover; /* Exibe a imagem inteira dentro do espaço disponível */
+    background-position: center; /* Centraliza a imagem no container */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+}
+
+.nav-link-style{
+    color: #fff;
+}
+
+.libre-baskerville-regular {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 2;
+}
+  
+.position-relative.flex {
+    min-height: 80vh; /* Define que o container ocupa a altura total da viewport */
+    display: flex;     /* Ativa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: end;     /* Centraliza verticalmente */
+    padding-bottom: 80px;
+}
+
+#welcome-title{
+    color:#063985;
+    font-weight: 700;
+    font-size: 3rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+#welcome-paragraph{
+    color: #fff;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.8s;
+}
+
+#bio-img{
+    border-radius: 10px;
+    border: 200px #063985;
+}
+
+#my-signature{
+    font-family: 'Dancing Script', cursive;
+}
+
+#btn-contact{
+    border: 2px solid #063985 !important;
+    border-radius: 20px !important;
+    color: #e4c27e;
+    font-weight: 400;
+    background: #063985;
+    width: 150px;
+    height: 50px;
+    margin-top: 30px;
+}
+
+#btn-contact:hover{
+    font-weight: 900;
+    transition: all 0.1s ease-in-out !important;
+}
+
+.text-warning{
+    color: orange !important;
+}
+
+.text-danger{
+    color: red !important;
+}
+
+.my-font-family{
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+.poppins-font{
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;  /* Faz com que o conteúdo ocupe o espaço restante */
+}
+
+.nav .nav-item .nav-link {
+    position: relative;
+    /* Prevent text decoration from interfering with our custom underline */
+    text-decoration: none;
+    color: #063985;
+}
+
+.nav .nav-item .nav-link::after{
+    content: "";
+    position:absolute;
+    bottom: -2px;
+    left: 50%;
+    height: 3px;
+    width: 0;
+    border-radius: 5px;
+    background-color: #063985;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Transition for both width and left */
+    transform: translateX(-50%); /* Center-align the starting point */
+}
+
+.nav .nav-item .nav-link:hover::after{
+    width: 70%;
+}
+
+.btn-login{
+    border: 2px solid #063985 !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease-in-out !important;
+    color: #e4c27e;
+    background: #063985;
+    width: 100px;
+    height: 50px;
+}
+
+.btn-login:hover{
+    background-color: #e4c27e !important;
+    color: #063985 !important;
+    border: 2px solid #063985 !important;
+    transition: all 0.3s ease-in-out !important;
+    font-weight: bolder;
+}
+
+.bg-color{
+    background-color: #063985;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-text{
+    color: #fff;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .nav-item{
+        margin-left: 20px;
+    }
+}

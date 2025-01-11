@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+<main>
+<form action="/submit" method="POST" class="container mt-5" enctype="multipart/form-data"> 
+  <!-- O elemento form -->
+  <!-- O atributo enctype="multipart/form-data" é necessário para enviar arquivos-->
+  <h1 class="mb-4">New Post</h1>
+  <div class="mb-3">
+    <input type="text" class="form-control" id="title" name="title" placeholder="Title" minlength="5" maxlength="100" required>
+    <small id="titleCounter" class="text-body-secondary d-flex justify-content-end">0/100</small>
+  </div>
+  <div class="mb-3">
+    <textarea class="form-control" id="content" name="content" rows="5" placeholder="Write your content here..." minlength="1000" maxlength="5000" required></textarea>
+    <small id="contentCounter" class="text-body-secondary d-flex justify-content-end">0/5000</small>
+  </div>
+  <div class="mb-3">
+    <input type="file" name="image" id="image" accept="image/*" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</main>
+  
+<script src="/scripts/counter.js"></script>
+
+<%- include("partials/footer.ejs") %>
+</body>
+</html>
